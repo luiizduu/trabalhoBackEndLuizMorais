@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(morgan('dev'));
+app.use(morgan(':method :url :status - :response-time ms'));
 
 const clientesRouter = require('./routes/clientes');
 const produtosRouter = require('./routes/produtos');
